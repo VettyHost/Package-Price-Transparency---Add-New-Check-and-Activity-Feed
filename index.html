@@ -22,7 +22,7 @@
   <div class="w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between mb-5 gap-3">
     <div class="flex items-center gap-1 bg-slate-200/60 p-1 rounded-xl text-xs font-bold border border-slate-300/20 shadow-sm">
       <button id="btnSelectInviteFlow" class="px-4 py-2 rounded-lg bg-white shadow-sm text-slate-800 transition duration-155">Invite Flow</button>
-      <button id="btnSelectOnBehalfFlow" class="px-4 py-2 rounded-lg text-slate-500 hover:text-slate-850 transition duration-155">Fill On Behalf</button>
+      <button id="btnSelectOnBehalfFlow" class="px-4 py-2 rounded-lg text-slate-500 hover:text-slate-855 transition duration-155">Fill On Behalf</button>
     </div>
     
     <!-- Dynamic Client Setter -->
@@ -111,10 +111,10 @@
         </div>
       </div>
 
-      <!-- Right Side Column containing header buttons and metadata details -->
-      <div class="lg:col-span-7 flex flex-col justify-between">
+      <!-- Right Side Column containing header buttons and metadata details (Pulled up into blank white spaces) -->
+      <div class="lg:col-span-7 flex flex-col justify-start gap-5 font-bold">
         
-        <!-- Button Actions Row matching screenshot actions (Includes Cost Summary) -->
+        <!-- Button Actions Row matching screenshot actions (Cost Summary enabled & interactive) -->
         <div class="flex flex-wrap gap-2.5 justify-start lg:justify-end pb-4 border-b border-slate-100">
           <button id="btnOpenChecksDrawer" class="flex items-center gap-2 bg-[#f8fafc] hover:bg-slate-50 text-slate-700 font-bold text-xs py-2 px-3.5 rounded-xl border border-slate-200 shadow-sm transition">
             <svg class="w-3.5 h-3.5 text-slate-500 fill-current" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v6H3a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3z"/></svg>
@@ -126,14 +126,14 @@
             Documents and Disclosures
           </button>
 
-          <button class="flex items-center gap-2 bg-[#f8fafc] hover:bg-slate-50 text-slate-700 font-bold text-xs py-2 px-3.5 rounded-xl border border-slate-200 shadow-sm transition-colors">
+          <button id="btnOpenCostSummary" class="flex items-center gap-2 bg-[#f8fafc] hover:bg-slate-50 hover:text-blue-600 text-slate-700 font-bold text-xs py-2 px-3.5 rounded-xl border border-slate-200 shadow-sm transition">
             <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             Cost Summary
           </button>
         </div>
 
-        <!-- Right Column details aligned vertically -->
-        <div class="space-y-2.5 text-xs text-slate-600 pt-4 lg:pt-6">
+        <!-- Right Column details pulled up into blank space -->
+        <div class="space-y-2.5 text-xs text-slate-600 font-normal">
           <div class="flex items-start">
             <span class="text-slate-400 w-32 shrink-0 font-medium">Date Of Birth</span>
             <span class="font-bold text-slate-700">05/07/XXXX <a href="#" class="text-blue-600 font-bold ml-1 hover:underline">View</a></span>
@@ -169,13 +169,12 @@
       <!-- LEFT COLUMN: ACTIONS & TIMELINE -->
       <div class="lg:col-span-5 space-y-6 flex flex-col">
         
-        <!-- ACTIONS CONTAINER CARD (Exactly matching image_c84893.png) -->
+        <!-- ACTIONS CONTAINER CARD -->
         <div class="space-y-2.5">
           <div class="flex justify-between items-center px-1">
             <h3 class="text-sm font-bold text-slate-800">Actions</h3>
             <a href="#" class="text-[11px] font-bold text-slate-400 hover:text-slate-600 transition">More Actions...</a>
           </div>
-          <!-- Clean box container matching image_c84893.png aesthetics -->
           <div class="bg-[#edf2f7]/60 border border-slate-200 rounded-2xl p-6 flex items-center justify-center text-center min-h-[125px] shadow-sm">
             <p class="text-xs font-semibold text-slate-500 leading-relaxed select-none">
               Quick action for you to take will appear here.<br>
@@ -218,7 +217,7 @@
           <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div class="flex items-center gap-2">
               <h3 class="text-sm font-extrabold text-slate-800">Verified Profile</h3>
-              <span class="text-xs bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded">Compliance Inspected</span>
+              <!-- Removed "Compliance Inspected" badge -->
             </div>
             <!-- Check person icon -->
             <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
@@ -233,10 +232,9 @@
             <!-- List divisions based on Vetty Categories -->
             <div class="space-y-3">
               
-              <!-- Identity Segment (Initially contains Social Security Trace matching image_ca7bca.png) -->
+              <!-- Identity Segment -->
               <div class="space-y-2">
                 <div class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase pl-2">Identity</div>
-                <!-- Default stacked layout: status badge on top, date stacked vertically underneath -->
                 <div class="bg-[#f8fafc] border border-slate-100 rounded-xl p-3.5 flex justify-between items-start text-xs">
                   <span class="font-bold text-slate-700 mt-0.5">Social Security Trace</span>
                   <div class="flex flex-col items-end shrink-0 select-none">
@@ -247,7 +245,7 @@
                 <div id="profileIdentityCustomContainer" class="space-y-2"></div>
               </div>
 
-              <!-- Basic Criminal Segment (Starts with Sex Offender Registry matching image_ca7bca.png, populated on Add) -->
+              <!-- Basic Criminal Segment -->
               <div class="space-y-2">
                 <div class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase pl-2">Basic Criminal</div>
                 <div class="bg-[#f8fafc] border border-slate-100 rounded-xl p-3.5 flex justify-between items-start text-xs">
@@ -260,9 +258,9 @@
                 <div id="profileCriminalCustomContainer" class="space-y-2"></div>
               </div>
 
-              <!-- Advanced Criminal Segment (Starts with County + State matching image_ca7bca.png, populated on Add) -->
+              <!-- Advanced Criminal Segment -->
               <div class="space-y-2">
-                <div class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase pl-2">Advanced Criminal</div>
+                <div class="text-[10px] font-extrabold text-[#94a3b8] tracking-wider uppercase pl-2">Advanced Criminal</div>
                 <div class="bg-[#f8fafc] border border-slate-100 rounded-xl p-3.5 flex justify-between items-start text-xs">
                   <span class="font-bold text-slate-700 mt-0.5">County Criminal Check</span>
                   <div class="flex flex-col items-end shrink-0 select-none">
@@ -289,6 +287,129 @@
 
     </div>
 
+  </div>
+
+  <!-- COST SUMMARY MODAL OVERLAY (IMAGE_E6AAA5) -->
+  <div id="costSummaryModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-5xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+      <!-- Header -->
+      <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+        <h3 class="text-sm font-bold text-slate-800" id="costSummaryTitle">Cost Summary for Test Emp</h3>
+        <button id="btnCloseCostSummaryX" class="text-slate-400 hover:text-slate-600 focus:outline-none transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <!-- Body -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-4 custom-scrollbar bg-slate-50/20">
+        <!-- Export Action Row -->
+        <div class="flex justify-end">
+          <button id="btnExportCSV" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs py-2 px-4 rounded-lg shadow-sm transition">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/></svg>
+            Export to CSV
+          </button>
+        </div>
+        
+        <!-- Table Frame (Grid design with inputs exact match) -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white">
+          <div class="overflow-x-auto custom-scrollbar">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 select-none">
+                  <th class="p-3 w-10 text-center"><input type="checkbox" checked disabled class="rounded border-slate-300 text-blue-600 focus:ring-blue-500"></th>
+                  <th class="p-3 w-10 font-bold"></th>
+                  <th class="p-3 font-bold min-w-[170px]">Package Name</th>
+                  <th class="p-3 font-bold min-w-[160px]">Check Name</th>
+                  <th class="p-3 font-bold min-w-[110px]">Jurisdictio...</th>
+                  <th class="p-3 font-bold min-w-[110px]">Names Sear...</th>
+                  <th class="p-3 font-bold min-w-[100px]">Complete...</th>
+                  <th class="p-3 font-bold w-16 text-right">Price</th>
+                  <th class="p-3 font-bold w-20 text-right">Passthro...</th>
+                  <th class="p-3 font-bold w-16 text-right">Discount</th>
+                  <th class="p-3 font-bold w-20 text-right">Package...</th>
+                </tr>
+                <!-- Header Filter Inputs -->
+                <tr class="border-b border-slate-200 bg-slate-50/50">
+                  <th class="p-2"></th>
+                  <th class="p-2"></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="package" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="check" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="jurisdiction" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="name" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="completed" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="price" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="passthrough" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="discount" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                  <th class="p-2 px-1"><input type="text" data-filter="packagePrice" class="w-full border border-slate-200 rounded-lg py-1 px-2 text-[10px] text-slate-700 bg-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-100 transition" placeholder=""></th>
+                </tr>
+              </thead>
+              <!-- Rows -->
+              <tbody id="costSummaryTableBody" class="divide-y divide-slate-150 text-slate-700 font-medium">
+                <!-- Injected Dynamically -->
+              </tbody>
+              <!-- Totals row summary -->
+              <tfoot class="border-t-2 border-slate-200 font-bold bg-slate-50/45 text-slate-800">
+                <tr id="costSummaryTotalRow">
+                  <!-- Injected dynamically -->
+                </tr>
+                <tr id="costSummaryGrandTotalRow" class="border-t border-slate-150">
+                  <!-- Injected dynamically -->
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          
+          <!-- Bottom Pagination Layout matching Image_e6aaa5 -->
+          <div class="bg-white border-t border-slate-200 px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 select-none">
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <select class="appearance-none bg-white border border-slate-200 rounded-lg pl-3 pr-8 py-1.5 font-semibold text-slate-700 focus:outline-none">
+                  <option>25</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </div>
+              </div>
+              <span class="font-medium text-slate-400">Per Page</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+              <span id="txtPaginationInfo" class="font-bold">1 to 1 of 1</span>
+              
+              <div class="flex items-center gap-1">
+                <button class="w-7 h-7 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button class="w-7 h-7 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+              
+              <span class="font-medium text-slate-400">Page 1 of 1</span>
+              
+              <div class="flex items-center gap-1">
+                <button class="w-7 h-7 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button class="w-7 h-7 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Bottom Close Button Outside white card -->
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-center sticky bottom-0">
+        <button id="btnCloseCostSummaryBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs py-2.5 px-8 rounded-full shadow-md transition">
+          Close
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- SLIDE-OVER DRAWER OVERLAY -->
@@ -320,13 +441,13 @@
       </div>
     </div>
 
-    <!-- Sticky Drawer Footer (Caret breakdown outline removed, green color dynamically calculated) -->
+    <!-- Sticky Drawer Footer -->
     <div class="border-t border-slate-100 p-5 bg-slate-50 flex flex-col items-end gap-2 relative">
       <div class="flex items-center gap-2">
-        <span class="text-xs font-bold text-slate-600">Total Package*:</span>
+        <span class="text-xs font-bold text-slate-600">Total Cost*:</span>
         <!-- Green indicator with custom caret toggle -->
         <button id="btnDrawerCaret" class="flex items-center gap-1 hover:text-blue-600 text-emerald-600 py-1 font-bold transition focus:outline-none select-none">
-          <span id="txtDrawerTotal" class="text-emerald-600 font-extrabold text-sm">$0.00</span>
+          <span id="txtDrawerTotal" class="text-emerald-600 font-extrabold text-sm">$1.00</span>
           <svg id="iconDrawerCaret" class="w-3.5 h-3.5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
       </div>
@@ -337,17 +458,16 @@
         <div class="space-y-2 text-xs">
           <div class="flex justify-between text-slate-500 font-medium">
             <span>Base Package Added Price</span>
-            <span>$0.00</span>
+            <span>$1.00</span>
           </div>
           
           <div id="drawerAddedByModifyContainer" class="hidden border-t border-slate-100 pt-2 mt-2">
             <div class="flex justify-between items-center">
               <span class="text-slate-700 font-bold">Added by modify</span>
-              <span id="txtDrawerAddedByModifySum" class="text-blue-600 font-bold">+$0.00</span>
             </div>
             
-            <div id="drawerAddedByModifyList" class="mt-1.5 space-y-1.5 pl-2 border-l border-slate-100 max-h-36 overflow-y-auto custom-scrollbar">
-              <!-- Dynamically populated checked rows -->
+            <div id="drawerAddedByModifyList" class="mt-1.5 space-y-1.5 pl-2 border-l border-slate-100 max-h-[140px] overflow-y-auto custom-scrollbar">
+              <!-- Dynamically populated checked rows with 5 items scroll-limit -->
             </div>
           </div>
         </div>
@@ -359,12 +479,12 @@
 
       <div class="flex justify-end gap-3 mt-2 w-full">
         <button id="btnCancelDrawer" class="flex items-center justify-center gap-1.5 bg-white border border-blue-600 hover:bg-blue-50 text-blue-600 text-xs font-bold py-2.5 px-4 rounded-lg shadow-sm transition">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
           Cancel
         </button>
         
         <button id="btnApplyDrawer" class="flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-5 rounded-lg shadow transition">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
           Next
         </button>
       </div>
@@ -376,35 +496,47 @@
     const appState = {
       flowType: 'invite', // 'invite' or 'behalf'
       clientName: 'Work Validater',
+      basePackagePrice: 1.00,
       checks: [
         // Identity
-        { id: 'identity-sol', category: 'Identity', name: 'Identity Solution', price: 1.00, checked: false },
-        { id: 'ss-trace', category: 'Identity', name: 'Social Security Trace', price: 1.10, checked: false },
+        { id: 'identity-sol', category: 'Identity', name: 'Identity Solution', price: 1.00, checked: false, isDefault: false },
+        { id: 'ss-trace', category: 'Identity', name: 'Social Security Trace', price: 1.10, checked: true, isDefault: true },
         
         // Motor Vehicle
-        { id: 'driving-rec', category: 'Motor Vehicle', name: 'Driving Record', price: 8.00, checked: false },
+        { id: 'driving-rec', category: 'Motor Vehicle', name: 'Driving Record', price: 8.00, checked: false, isDefault: false },
         
         // Basic Search
-        { id: 'child-abuse', category: 'Basic Search', name: 'Child Abuse Registry - Pennsylvania', price: 2.00, checked: false },
-        { id: 'fda-debar', category: 'Basic Search', name: 'FDA Debarment', price: 3.00, checked: false },
-        { id: 'gsa-sam', category: 'Basic Search', name: 'GSA/SAM List', price: 8.00, checked: false },
-        { id: 'healthcare', category: 'Basic Search', name: 'Healthcare Sanctions Level 3', price: 6.00, checked: false },
-        { id: 'national-crim', category: 'Basic Search', name: 'National Criminal', price: 7.00, checked: false },
-        { id: 'oig-hhs', category: 'Basic Search', name: 'OIG Department Of Health And Human Services', price: 4.00, checked: false },
-        { id: 'pa-patch', category: 'Basic Search', name: 'Pa Patch', price: 6.00, checked: false },
-        { id: 'sanctions-watchlist', category: 'Basic Search', name: 'Sanctions And Watchlist Search', price: 6.00, checked: false },
-        { id: 'sex-offender', category: 'Basic Search', name: 'Sex Offender Registry', price: 4.00, checked: false },
+        { id: 'child-abuse', category: 'Basic Search', name: 'Child Abuse Registry - Pennsylvania', price: 2.00, checked: false, isDefault: false },
+        { id: 'fda-debar', category: 'Basic Search', name: 'FDA Debarment', price: 3.00, checked: false, isDefault: false },
+        { id: 'gsa-sam', category: 'Basic Search', name: 'GSA/SAM List', price: 8.00, checked: false, isDefault: false },
+        { id: 'healthcare', category: 'Basic Search', name: 'Healthcare Sanctions Level 3', price: 6.00, checked: false, isDefault: false },
+        { id: 'national-crim', category: 'Basic Search', name: 'National Criminal', price: 7.00, checked: false, isDefault: false },
+        { id: 'oig-hhs', category: 'Basic Search', name: 'OIG Department Of Health And Human Services', price: 4.00, checked: false, isDefault: false },
+        { id: 'pa-patch', category: 'Basic Search', name: 'Pa Patch', price: 6.00, checked: false, isDefault: false },
+        { id: 'sanctions-watchlist', category: 'Basic Search', name: 'Sanctions And Watchlist Search', price: 6.00, checked: false, isDefault: false },
+        { id: 'sex-offender', category: 'Basic Search', name: 'Sex Offender Registry', price: 4.00, checked: true, isDefault: true },
 
         // Advanced Criminal
-        { id: 'county-crim', category: 'Advanced Criminal', name: 'County Criminal Check', price: 8.67, checked: false },
-        { id: 'state-crim', category: 'Advanced Criminal', name: 'State Criminal Check', price: 2.00, checked: false },
-        { id: 'county-civil', category: 'Advanced Criminal', name: 'County Civil Check', price: 4.00, checked: false }
+        { id: 'county-crim', category: 'Advanced Criminal', name: 'County Criminal Check', price: 8.67, checked: true, isDefault: true },
+        { id: 'state-crim', category: 'Advanced Criminal', name: 'State Criminal Check', price: 2.00, checked: true, isDefault: true },
+        { id: 'county-civil', category: 'Advanced Criminal', name: 'County Civil Check', price: 4.00, checked: false, isDefault: false }
       ],
       tempSelections: {},
-      activityAddedChecks: [] // Stores checks successfully applied in the current simulator run
+      activityAddedChecks: [], // Stores checks successfully applied in the current simulator run
+      tableFilters: {
+        package: '',
+        check: '',
+        jurisdiction: '',
+        name: '',
+        completed: '',
+        price: '',
+        passthrough: '',
+        discount: '',
+        packagePrice: ''
+      }
     };
 
-    // DOM Elements
+    // DOM Elements - Consolidated exactly once
     const btnOpenChecksDrawer = document.getElementById('btnOpenChecksDrawer');
     const modifyDrawer = document.getElementById('modifyDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
@@ -415,9 +547,9 @@
     // Total Cost Components
     const txtDrawerTotal = document.getElementById('txtDrawerTotal');
     const btnDrawerCaret = document.getElementById('btnDrawerCaret');
+    const iconDrawerCaret = document.getElementById('iconDrawerCaret');
     const dropdownDrawerBreakdown = document.getElementById('dropdownDrawerBreakdown');
     const drawerAddedByModifyContainer = document.getElementById('drawerAddedByModifyContainer');
-    const txtDrawerAddedByModifySum = document.getElementById('txtDrawerAddedByModifySum');
     const drawerAddedByModifyList = document.getElementById('drawerAddedByModifyList');
 
     const searchChecks = document.getElementById('searchChecks');
@@ -434,6 +566,17 @@
     const btnSelectInviteFlow = document.getElementById('btnSelectInviteFlow');
     const btnSelectOnBehalfFlow = document.getElementById('btnSelectOnBehalfFlow');
 
+    // Cost Summary Modal Elements
+    const btnOpenCostSummary = document.getElementById('btnOpenCostSummary');
+    const costSummaryModal = document.getElementById('costSummaryModal');
+    const btnCloseCostSummaryX = document.getElementById('btnCloseCostSummaryX');
+    const btnCloseCostSummaryBtn = document.getElementById('btnCloseCostSummaryBtn');
+    const btnExportCSV = document.getElementById('btnExportCSV');
+    const costSummaryTableBody = document.getElementById('costSummaryTableBody');
+    const costSummaryTotalRow = document.getElementById('costSummaryTotalRow');
+    const costSummaryGrandTotalRow = document.getElementById('costSummaryGrandTotalRow');
+    const txtPaginationInfo = document.getElementById('txtPaginationInfo');
+
     function init() {
       // General Event Handlers
       btnOpenChecksDrawer.addEventListener('click', openDrawer);
@@ -441,6 +584,40 @@
       btnCancelDrawer.addEventListener('click', closeDrawer);
       btnApplyDrawer.addEventListener('click', saveDrawerModifications);
       drawerOverlay.addEventListener('click', closeDrawer);
+
+      // Cost Summary Modal Triggers
+      btnOpenCostSummary.addEventListener('click', openCostSummaryModal);
+      btnCloseCostSummaryX.addEventListener('click', closeCostSummaryModal);
+      btnCloseCostSummaryBtn.addEventListener('click', closeCostSummaryModal);
+      btnExportCSV.addEventListener('click', exportCostSummaryToCSV);
+
+      // Filter Inputs for Cost Summary
+      document.querySelectorAll('input[data-filter]').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const filterKey = e.target.getAttribute('data-filter');
+          appState.tableFilters[filterKey] = e.target.value.toLowerCase().trim();
+          renderCostSummaryRows();
+        });
+      });
+
+      // Caret popover toggle inside drawer
+      btnDrawerCaret.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = dropdownDrawerBreakdown.classList.contains('hidden');
+        if (isHidden) {
+          dropdownDrawerBreakdown.classList.remove('hidden');
+          iconDrawerCaret.classList.add('rotate-180');
+        } else {
+          dropdownDrawerBreakdown.classList.add('hidden');
+          iconDrawerCaret.classList.remove('rotate-180');
+        }
+      });
+
+      // Click Outside Closes Drawer Breakdown Dropdown
+      document.addEventListener('click', () => {
+        dropdownDrawerBreakdown.classList.add('hidden');
+        iconDrawerCaret.classList.remove('rotate-180');
+      });
 
       // Client name tracking
       inputClientName.addEventListener('input', () => {
@@ -457,27 +634,13 @@
         switchFlow('behalf');
       });
 
-      // Caret popover toggle inside drawer
-      btnDrawerCaret.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isHidden = dropdownDrawerBreakdown.classList.contains('hidden');
-        if (isHidden) {
-          dropdownDrawerBreakdown.classList.remove('hidden');
-        } else {
-          dropdownDrawerBreakdown.classList.add('hidden');
-        }
-      });
-
-      document.addEventListener('click', () => {
-        dropdownDrawerBreakdown.classList.add('hidden');
-      });
-
       searchChecks.addEventListener('input', (e) => {
         renderDrawerCategories(e.target.value.toLowerCase().trim());
       });
 
       // Load initial layout
       renderTimeline();
+      applySelectionsToVerifiedProfile();
     }
 
     function switchFlow(flow) {
@@ -486,10 +649,10 @@
       // Update simulator buttons style
       if (flow === 'invite') {
         btnSelectInviteFlow.className = "px-4 py-2 rounded-lg bg-white shadow-sm text-slate-800 transition duration-155";
-        btnSelectOnBehalfFlow.className = "px-4 py-2 rounded-lg text-slate-500 hover:text-slate-850 transition duration-155";
+        btnSelectOnBehalfFlow.className = "px-4 py-2 rounded-lg text-slate-500 hover:text-slate-855 transition duration-155";
       } else {
         btnSelectOnBehalfFlow.className = "px-4 py-2 rounded-lg bg-white shadow-sm text-slate-800 transition duration-155";
-        btnSelectInviteFlow.className = "px-4 py-2 rounded-lg text-slate-500 hover:text-slate-850 transition duration-155";
+        btnSelectInviteFlow.className = "px-4 py-2 rounded-lg text-slate-500 hover:text-slate-855 transition duration-155";
       }
 
       renderTimeline();
@@ -538,25 +701,54 @@
         matches.forEach(mod => {
           const isChecked = appState.tempSelections[mod.id] !== undefined ? appState.tempSelections[mod.id] : mod.checked;
           const itemRow = document.createElement('div');
-          itemRow.className = "flex items-center justify-between p-3.5 bg-[#f8fafc] hover:bg-slate-50 rounded-xl border border-slate-100 text-xs cursor-pointer select-none transition";
 
-          itemRow.onclick = () => {
-            appState.tempSelections[mod.id] = !isChecked;
-            renderDrawerCategories(filterText);
-            calculateDrawerLiveTotal();
-          };
+          if (mod.isDefault) {
+            // Pre-selected uncheckable package check styling (Matches light blue checkbox in image_bc6f88.png)
+            itemRow.className = "flex items-center justify-between p-3.5 bg-[#f8fafc] rounded-xl border border-slate-100 text-xs select-none";
+            itemRow.innerHTML = `
+              <div class="flex items-center gap-3">
+                <div class="flex items-center justify-center w-5 h-5 rounded bg-[#93c5fd] text-white cursor-not-allowed select-none transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="font-semibold text-slate-600">${mod.name}</span>
+              </div>
+              <span class="font-bold text-blue-600 flex items-center gap-1">$ ${mod.price.toFixed(mod.price % 1 === 0 ? 0 : 2)} <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+            `;
+          } else {
+            // User-toggleable checks (Solid blue when checked, light outline when unchecked)
+            itemRow.className = "flex items-center justify-between p-3.5 bg-[#f8fafc] hover:bg-slate-50 rounded-xl border border-slate-100 text-xs cursor-pointer select-none transition";
+            
+            itemRow.onclick = () => {
+              appState.tempSelections[mod.id] = !isChecked;
+              renderDrawerCategories(filterText);
+              calculateDrawerLiveTotal();
+            };
 
-          const checkIndicator = isChecked
-            ? `<div class="flex items-center justify-center w-5 h-5 rounded bg-blue-600 text-white"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>`
-            : `<div class="w-5 h-5 rounded border border-slate-300 bg-slate-100"></div>`;
+            let checkboxMarkup = '';
+            if (isChecked) {
+              checkboxMarkup = `
+                <div class="flex items-center justify-center w-5 h-5 rounded bg-blue-600 text-white transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              `;
+            } else {
+              checkboxMarkup = `
+                <div class="w-5 h-5 rounded border border-slate-300 bg-slate-100 transition-colors"></div>
+              `;
+            }
 
-          itemRow.innerHTML = `
-            <div class="flex items-center gap-3">
-              ${checkIndicator}
-              <span class="font-semibold text-slate-600">${mod.name}</span>
-            </div>
-            <span class="font-bold text-blue-600 flex items-center gap-1">$ ${mod.price} <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
-          `;
+            itemRow.innerHTML = `
+              <div class="flex items-center gap-3">
+                ${checkboxMarkup}
+                <span class="font-semibold text-slate-600">${mod.name}</span>
+              </div>
+              <span class="font-bold text-blue-600 flex items-center gap-1">$ ${mod.price} <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+            `;
+          }
 
           listContainer.appendChild(itemRow);
         });
@@ -567,17 +759,19 @@
     }
 
     function calculateDrawerLiveTotal() {
-      let sum = 0.00;
+      let sum = appState.basePackagePrice;
+      let addedModSum = 0;
       drawerAddedByModifyList.innerHTML = '';
 
       appState.checks.forEach(mod => {
         const isChecked = appState.tempSelections[mod.id] !== undefined ? appState.tempSelections[mod.id] : mod.checked;
-        if (isChecked) {
+        if (isChecked && !mod.isDefault) {
           sum += mod.price;
+          addedModSum += mod.price;
           drawerAddedByModifyList.innerHTML += `
-            <div class="flex justify-between text-slate-500 font-medium pl-1">
+            <div class="flex justify-between text-slate-500 font-medium pl-1 pr-1.5 text-xs py-1">
               <span>• ${mod.name}</span>
-              <span class="text-slate-600 font-bold">+$${mod.price.toFixed(2)}</span>
+              <span class="text-slate-655 font-bold">+$${mod.price.toFixed(2)}</span>
             </div>
           `;
         }
@@ -585,9 +779,8 @@
 
       txtDrawerTotal.textContent = `$${sum.toFixed(2)}`;
 
-      if (sum > 0) {
+      if (addedModSum > 0) {
         drawerAddedByModifyContainer.classList.remove('hidden');
-        txtDrawerAddedByModifySum.textContent = `+$${sum.toFixed(2)}`;
       } else {
         drawerAddedByModifyContainer.classList.add('hidden');
       }
@@ -645,7 +838,7 @@
       profileAdvancedCustomContainer.innerHTML = '';
 
       appState.checks.forEach(mod => {
-        if (mod.checked) {
+        if (mod.checked && !mod.isDefault) {
           const row = document.createElement('div');
           row.className = "bg-[#f8fafc] border border-slate-100 rounded-xl p-3.5 flex justify-between items-start text-xs";
           row.innerHTML = `
@@ -749,7 +942,7 @@
         if (item.active) {
           bulletMarkup = `
             <div class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center border-4 border-white shadow-sm shrink-0 z-10 select-none">
-              <div class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-blue-650 animate-pulse"></div>
             </div>
           `;
         } else if (item.hasReadMore) {
@@ -771,9 +964,9 @@
         if (item.hasReadMore) {
           collapsibleMarkup = `
             <div class="mt-2.5">
-              <button onclick="toggleReadMore(event)" class="text-[11px] font-bold text-blue-600 hover:text-blue-800 transition focus:outline-none flex items-center gap-1">
+              <button onclick="toggleReadMore(event)" class="text-[11px] font-bold text-blue-600 hover:text-blue-850 transition focus:outline-none flex items-center gap-1">
                 <span>Read More</span>
-                <svg class="w-3 h-3 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-3.5 h-3.5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="hidden mt-2 p-2.5 bg-slate-50 border border-slate-150 rounded-xl text-[11px] text-slate-600 font-bold leading-relaxed shadow-inner">
                 ${item.checks}
@@ -800,6 +993,201 @@
           timelineContainer.appendChild(card);
         }
       });
+    }
+
+    // ==========================================
+    // COST SUMMARY MODAL LOGIC (IMAGE_E6AAA5)
+    // ==========================================
+    function openCostSummaryModal() {
+      document.getElementById('costSummaryTitle').textContent = `Cost Summary for Test Emp`;
+      renderCostSummaryRows();
+      costSummaryModal.classList.remove('hidden');
+    }
+
+    function closeCostSummaryModal() {
+      costSummaryModal.classList.add('hidden');
+    }
+
+    // Generates precise mock jurisdictions based on check type
+    function getJurisdictionForCheck(name) {
+      if (name.includes('County')) return 'Liberty';
+      if (name.includes('State')) return 'GA';
+      if (name.includes('Pennsylvania')) return 'Liberty';
+      return 'GA';
+    }
+
+    function renderCostSummaryRows() {
+      costSummaryTableBody.innerHTML = '';
+      
+      // Collect baseline row data + all added custom checks
+      const activeCustomChecks = appState.checks.filter(mod => mod.checked && !mod.isDefault);
+      
+      // Row Array setup
+      const allRows = [];
+      
+      // 1. First Row: The package actual package name that is currently shown
+      allRows.push({
+        isPackage: true,
+        packageName: 'Empty pkg',
+        checkName: '',
+        jurisdiction: '',
+        namesSearched: '',
+        completedDate: '',
+        price: 0,
+        passthrough: 0,
+        discount: 0,
+        packagePrice: appState.basePackagePrice
+      });
+
+      // 2. Next Rows: "Additional check added by client" - with respective checks
+      activeCustomChecks.forEach(mod => {
+        allRows.push({
+          isPackage: false,
+          packageName: 'Additional check added by client',
+          checkName: mod.name,
+          jurisdiction: getJurisdictionForCheck(mod.name),
+          namesSearched: 'Test Emp',
+          completedDate: '',
+          price: mod.price, // <- Now mapped correctly to Price column
+          passthrough: 0,   // <- Passthrough is now 0 for additional checks
+          discount: 0,
+          packagePrice: 0
+        });
+      });
+
+      // Filter rows locally on user inputs
+      const filteredRows = allRows.filter(row => {
+        const pFilter = appState.tableFilters.package;
+        const cFilter = appState.tableFilters.check;
+        const jFilter = appState.tableFilters.jurisdiction;
+        const nFilter = appState.tableFilters.name;
+        const dFilter = appState.tableFilters.completed;
+        const prFilter = appState.tableFilters.price;
+        const paFilter = appState.tableFilters.passthrough;
+        const diFilter = appState.tableFilters.discount;
+        const pkgFilter = appState.tableFilters.packagePrice;
+
+        if (pFilter && !row.packageName.toLowerCase().includes(pFilter)) return false;
+        if (cFilter && !row.checkName.toLowerCase().includes(cFilter)) return false;
+        if (jFilter && !row.jurisdiction.toLowerCase().includes(jFilter)) return false;
+        if (nFilter && !row.namesSearched.toLowerCase().includes(nFilter)) return false;
+        if (dFilter && !row.completedDate.toLowerCase().includes(dFilter)) return false;
+        if (prFilter && !row.price.toString().includes(prFilter)) return false;
+        if (paFilter && !row.passthrough.toString().includes(paFilter)) return false;
+        if (diFilter && !row.discount.toString().includes(diFilter)) return false;
+        if (pkgFilter && !row.packagePrice.toString().includes(pkgFilter)) return false;
+
+        return true;
+      });
+
+      // Render Rows
+      let runningPriceSum = 0;
+      let runningPassthroughSum = 0;
+      let runningDiscountSum = 0;
+      let runningPackageSum = 0;
+
+      filteredRows.forEach((row, idx) => {
+        runningPriceSum += row.price;
+        runningPassthroughSum += row.passthrough;
+        runningDiscountSum += row.discount;
+        runningPackageSum += row.packagePrice;
+
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50 transition even:bg-slate-50/30";
+        tr.innerHTML = `
+          <td class="p-3 text-center border-r border-slate-100"><input type="checkbox" checked disabled class="rounded border-slate-300 text-blue-600 focus:ring-blue-500"></td>
+          <td class="p-3 text-slate-400 font-semibold border-r border-slate-100 text-center select-none">${idx + 1}</td>
+          <td class="p-3 font-semibold border-r border-slate-100">${row.packageName}</td>
+          <td class="p-3 font-semibold border-r border-slate-100 text-slate-500">${row.checkName || ''}</td>
+          <td class="p-3 font-semibold border-r border-slate-100 text-slate-500">${row.jurisdiction || ''}</td>
+          <td class="p-3 font-semibold border-r border-slate-100 text-slate-500">${row.namesSearched || ''}</td>
+          <td class="p-3 font-semibold border-r border-slate-100 text-slate-500">${row.completedDate || ''}</td>
+          <td class="p-3 text-right font-bold border-r border-slate-100 text-slate-500">$${row.price.toFixed(modPriceFormat(row.price))}</td>
+          <td class="p-3 text-right font-bold border-r border-slate-100 text-slate-500">$${row.passthrough.toFixed(modPriceFormat(row.passthrough))}</td>
+          <td class="p-3 text-right font-bold border-r border-slate-100 text-slate-500">$${row.discount}</td>
+          <td class="p-3 text-right font-bold text-slate-500">$${row.packagePrice.toFixed(2)}</td>
+        `;
+        costSummaryTableBody.appendChild(tr);
+      });
+
+      // Helper price output formatting
+      function modPriceFormat(val) {
+        return val % 1 === 0 ? 0 : 2;
+      }
+
+      // Update Pagination label info bar
+      txtPaginationInfo.textContent = `1 to ${filteredRows.length} of ${filteredRows.length}`;
+
+      // Update Total Footers dynamically
+      costSummaryTotalRow.innerHTML = `
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3 text-right text-slate-800">Total</td>
+        <td class="p-3 text-right font-extrabold text-slate-800">$${runningPriceSum.toFixed(2)}</td>
+        <td class="p-3 text-right font-extrabold text-slate-800">$${runningPassthroughSum.toFixed(2)}</td>
+        <td class="p-3 text-right font-extrabold text-slate-800">$${runningDiscountSum}</td>
+        <td class="p-3 text-right font-extrabold text-slate-800">$${runningPackageSum.toFixed(2)}</td>
+      `;
+
+      const grandTotalSum = runningPriceSum + runningPassthroughSum + runningPackageSum;
+      costSummaryGrandTotalRow.innerHTML = `
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3"></td>
+        <td class="p-3 text-right text-slate-800">Grand Total</td>
+        <td class="p-3 text-right font-black text-slate-900 text-sm" colspan="4">$${grandTotalSum.toFixed(2)}</td>
+      `;
+    }
+
+    // Export to Spreadsheet/CSV Logic (Restructured perfectly matching image_f626a8.png layout format)
+    function exportCostSummaryToCSV() {
+      const activeCustomChecks = appState.checks.filter(mod => mod.checked && !mod.isDefault);
+      
+      let csvContent = "";
+      
+      // Top Level Profile Meta Blocks exactly as shown in KajalStrimliner sheet screenshot
+      csvContent += `Candidate Name,Test Emp\n`;
+      csvContent += `Client Name,${appState.clientName}\n`;
+      csvContent += `Department,Talent Acquisition\n`;
+      csvContent += `Location,New Newyork\n`;
+      csvContent += `Package Name,Empty pkg\n\n`; // Blank line after Package Name
+      
+      // Grid Header row matching image_f626a8 exactly
+      csvContent += "Package Name,Check Name,Jurisdictions Searched,Names Searched,Completed Date,Price,Passthrough Fee,Discount,Package Price\n";
+      
+      // First row representing base package price
+      csvContent += `Empty pkg,,,,,$0.00,$0.00,$0.00,$${appState.basePackagePrice.toFixed(2)}\n`;
+      
+      // Secondary rows for additions (Pricing correctly mapped to Price column in CSV)
+      let runningPrice = 0;
+      activeCustomChecks.forEach(mod => {
+        runningPrice += mod.price;
+        csvContent += `Additional check added by client,${mod.name},${getJurisdictionForCheck(mod.name)},Test Emp,,$${mod.price.toFixed(2)},$0.00,$0.00,$0.00\n`;
+      });
+
+      // Dynamic Subtotals
+      csvContent += `,,,,Totals:,$${runningPrice.toFixed(2)},$0.00,$0.00,$${appState.basePackagePrice.toFixed(2)}\n`;
+      
+      // Grand Totals Summation
+      const grandTotalSum = runningPrice + appState.basePackagePrice;
+      csvContent += `,,,,Grand Total:,$${grandTotalSum.toFixed(2)},,,\n`;
+
+      // Trigger standard CSV download cleanly
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "vetty_cost_summary_test_emp.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     window.onload = init;
